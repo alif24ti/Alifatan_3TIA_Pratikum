@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Pertemuan5.LimaActivity">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#FF5722"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.001"
+            app:subtitleTextColor="@android:color/white"
+            app:titleTextColor="@android:color/white"
+            app:layout_scrollFlags="scroll|enterAlways"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:padding="24dp"
+        android:clipToPadding="false">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/btnWebview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Web view"
+                android:backgroundTint="@color/Abu"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="lorem ipsum dolor sit amet consectetur adipiscing elit libero occaecat deserunt enim voluptas at accusamus ullamco culpa cupiditate aute tempor iusto duis cillum id qui ut voluptas harum in excepturi ex dolore sunt maxime cupidatat veniam voluptas autem nihil quo non nobis molestias nam distinctio voluptas fuga amet temporibus facere"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="lorem ipsum dolor sit amet consectetur adipiscing elit libero occaecat deserunt enim voluptas at accusamus ullamco culpa cupiditate aute tempor iusto duis cillum id qui ut voluptas harum in excepturi ex dolore sunt maxime cupidatat veniam voluptas autem nihil quo non nobis molestias nam distinctio voluptas fuga amet temporibus facere"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="lorem ipsum dolor sit amet consectetur adipiscing elit libero occaecat deserunt enim voluptas at accusamus ullamco culpa cupiditate aute tempor iusto duis cillum id qui ut voluptas harum in excepturi ex dolore sunt maxime cupidatat veniam voluptas autem nihil quo non nobis molestias nam distinctio voluptas fuga amet temporibus facere"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="lorem ipsum dolor sit amet consectetur adipiscing elit libero occaecat deserunt enim voluptas at accusamus ullamco culpa cupiditate aute tempor iusto duis cillum id qui ut voluptas harum in excepturi ex dolore sunt maxime cupidatat veniam voluptas autem nihil quo non nobis molestias nam distinctio voluptas fuga amet temporibus facere"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="lorem ipsum dolor sit amet consectetur adipiscing elit libero occaecat deserunt enim voluptas at accusamus ullamco culpa cupiditate aute tempor iusto duis cillum id qui ut voluptas harum in excepturi ex dolore sunt maxime cupidatat veniam voluptas autem nihil quo non nobis molestias nam distinctio voluptas fuga amet temporibus facere"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="lorem ipsum dolor sit amet consectetur adipiscing elit libero occaecat deserunt enim voluptas at accusamus ullamco culpa cupiditate aute tempor iusto duis cillum id qui ut voluptas harum in excepturi ex dolore sunt maxime cupidatat veniam voluptas autem nihil quo non nobis molestias nam distinctio voluptas fuga amet temporibus facere"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="lorem ipsum dolor sit amet consectetur adipiscing elit libero occaecat deserunt enim voluptas at accusamus ullamco culpa cupiditate aute tempor iusto duis cillum id qui ut voluptas harum in excepturi ex dolore sunt maxime cupidatat veniam voluptas autem nihil quo non nobis molestias nam distinctio voluptas fuga amet temporibus facere"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="lorem ipsum dolor sit amet consectetur adipiscing elit libero occaecat deserunt enim voluptas at accusamus ullamco culpa cupiditate aute tempor iusto duis cillum id qui ut voluptas harum in excepturi ex dolore sunt maxime cupidatat veniam voluptas autem nihil quo non nobis molestias nam distinctio voluptas fuga amet temporibus facere"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="lorem ipsum dolor sit amet consectetur adipiscing elit libero occaecat deserunt enim voluptas at accusamus ullamco culpa cupiditate aute tempor iusto duis cillum id qui ut voluptas harum in excepturi ex dolore sunt maxime cupidatat veniam voluptas autem nihil quo non nobis molestias nam distinctio voluptas fuga amet temporibus facere"/>
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
