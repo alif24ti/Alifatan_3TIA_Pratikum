@@ -4,10 +4,12 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.alif_3tia_mobile.Pertemuan5.LimaActivity
+import com.example.alif_3tia_mobile.Pertemuan6.EnamActivity
 import com.example.alif_3tia_mobile.databinding.ActivityLogin2Binding
 import com.example.alif_3tia_mobile.databinding.ActivityMainBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
@@ -29,11 +31,12 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        val sharedPref = getSharedPreferences("user_pref", MODE_PRIVATE)
         val user = intent.getStringExtra("username")
-        val pass= intent.getStringExtra("password")
+        val pass = intent.getStringExtra("password")
 
-        binding.textView3.text =user
-        binding.textView4.text =pass
+        binding.textView3.text = user
+        binding.textView4.text = pass
 
         binding.btnSnackbar.setOnClickListener {
             Snackbar.make(
@@ -49,22 +52,43 @@ class MainActivity : AppCompatActivity() {
                 .show()
 
         }
-        binding.btnAlert.setOnClickListener { MaterialAlertDialogBuilder(this)
-            .setTitle("Hapus data")
-            .setMessage("Data Tidak Bisa di Kembalikan")
-            .setNegativeButton("Batal", null)
-            .setPositiveButton("Hapus") { dialog, _ ->
-                // proses hapus
-                dialog.dismiss()
-            }
-            .setCancelable(false)
-            .show() }
+        binding.btnAlert.setOnClickListener {
+            MaterialAlertDialogBuilder(this)
+                .setTitle("Hapus data")
+                .setMessage("Data Tidak Bisa di Kembalikan")
+                .setNegativeButton("Batal", null)
+                .setPositiveButton("Hapus") { dialog, _ ->
+                    // proses hapus
+                    dialog.dismiss()
+                }
+                .setCancelable(false)
+                .show()
+        }
         binding.btnlima.setOnClickListener {
             val intent = Intent(this, LimaActivity::class.java)
             startActivity(intent)
         }
+        binding.btnEnam.setOnClickListener {
+            val intent = Intent(this, EnamActivity::class.java)
+            startActivity(intent)
+        }
+        binding.btnLogout.setOnClickListener {
+            AlertDialog.Builder(this)
+                .setTitle("Login Gagal")
+                .setMessage("Silahkan coba lagi")
+                .setPositiveButton("Ya") { dialog, _ ->
+                    val editor = sharedPref.edit()
+                    editor.clear()
+                    editor.apply()
+                    dialog.dismiss()
+                    startActivity(Intent(this, LoginActivity2::class.java))
+                    finish()
+                }
+                .setNegativeButton("Batal") { dialog, _ -> dialog.dismiss() }
+                .show()
+        }
     }
-
-
-
 }
+
+
+
