@@ -1,4 +1,4 @@
-package com.example.alif_3tia_mobile.Pertemuan6
+package com.example.alif_3tia_mobile.Home.Pertemuan6
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,12 +8,13 @@ import android.view.ViewGroup
 import com.example.alif_3tia_mobile.R
 
 
-class TigaFragment : Fragment() {
+class SatuFrament : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_tiga, container, false)
+        return inflater.inflate(R.layout.fragment_satu_frament, container, false)
     }
 }
+

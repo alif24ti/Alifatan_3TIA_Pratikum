@@ -1,4 +1,4 @@
-package com.example.alif_3tia_mobile.Pertemuan5
+package com.example.alif_3tia_mobile.Home.Pertemuan5
 
 import android.content.Intent
 import android.os.Bundle
@@ -11,7 +11,6 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.alif_3tia_mobile.R
 import com.example.alif_3tia_mobile.databinding.ActivityLimaBinding
-import com.example.alif_3tia_mobile.databinding.ActivityLogin2Binding
 
 class LimaActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLimaBinding

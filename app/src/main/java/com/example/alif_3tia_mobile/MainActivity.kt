@@ -8,9 +8,8 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.alif_3tia_mobile.Pertemuan5.LimaActivity
-import com.example.alif_3tia_mobile.Pertemuan6.EnamActivity
-import com.example.alif_3tia_mobile.databinding.ActivityLogin2Binding
+import com.example.alif_3tia_mobile.Home.Pertemuan5.LimaActivity
+import com.example.alif_3tia_mobile.Home.Pertemuan6.EnamActivity
 import com.example.alif_3tia_mobile.databinding.ActivityMainBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
