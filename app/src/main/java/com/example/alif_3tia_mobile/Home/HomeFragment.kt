@@ -12,6 +12,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.example.alif_3tia_mobile.Home.Pertemuan5.LimaActivity
 import com.example.alif_3tia_mobile.Home.Pertemuan6.EnamActivity
+import com.example.alif_3tia_mobile.Home.Pertemuan_9.NinthActivity
 import com.example.alif_3tia_mobile.LoginActivity2
 import com.example.alif_3tia_mobile.MainActivity
 import com.example.alif_3tia_mobile.R
@@ -20,7 +21,7 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
 
 class HomeFragment : Fragment() {
-    private var _binding: FragmentHomeBinding?= null
+    private var _binding: FragmentHomeBinding? = null
 
     private val binding get() = _binding!!
 
@@ -31,7 +32,7 @@ class HomeFragment : Fragment() {
         // Inflate the layout for this fragment
 
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
-        return  binding.root
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -54,7 +55,11 @@ class HomeFragment : Fragment() {
                     // kembalikan item
                     val intent = Intent(requireContext(), MainActivity::class.java)
                     startActivity(intent)
-                    Toast.makeText(requireContext(), "Kembali ke Halaman Activity", Toast.LENGTH_LONG).show()
+                    Toast.makeText(
+                        requireContext(),
+                        "Kembali ke Halaman Activity",
+                        Toast.LENGTH_LONG
+                    ).show()
                 }
                 .show()
 
@@ -78,24 +83,30 @@ class HomeFragment : Fragment() {
         binding.btnEnam.setOnClickListener {
             val intent = Intent(requireContext(), EnamActivity::class.java)
             startActivity(intent)
+
         }
-        binding.btnLogout.setOnClickListener {
-            AlertDialog.Builder(requireContext())
-                .setTitle("Login Gagal")
-                .setMessage("Silahkan coba lagi")
-                .setPositiveButton("Ya") { dialog, _ ->
-                    val editor = sharedPref.edit()
-                    editor.clear()
-                    editor.apply()
-                    dialog.dismiss()
-                    startActivity(Intent(requireContext(), LoginActivity2::class.java))
-                    requireActivity().finish()
-                }
-                .setNegativeButton("Batal") { dialog, _ -> dialog.dismiss() }
-                .show()
+        binding.btnP9.setOnClickListener {
+            val intent = Intent(requireContext(), NinthActivity::class.java)
+            startActivity(intent)
+        }
+            binding.btnLogout.setOnClickListener {
+                AlertDialog.Builder(requireContext())
+                    .setTitle("Login Gagal")
+                    .setMessage("Silahkan coba lagi")
+                    .setPositiveButton("Ya") { dialog, _ ->
+                        val editor = sharedPref.edit()
+                        editor.clear()
+                        editor.apply()
+                        dialog.dismiss()
+                        startActivity(Intent(requireContext(), LoginActivity2::class.java))
+                        requireActivity().finish()
+                    }
+                    .setNegativeButton("Batal") { dialog, _ -> dialog.dismiss() }
+                    .show()
+            }
         }
     }
-}
+
 
 
 
