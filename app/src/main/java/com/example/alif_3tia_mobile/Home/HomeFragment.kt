@@ -12,6 +12,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.example.alif_3tia_mobile.Home.Pertemuan5.LimaActivity
 import com.example.alif_3tia_mobile.Home.Pertemuan6.EnamActivity
+import com.example.alif_3tia_mobile.Home.Pertemuan_10.TenthActivity
 import com.example.alif_3tia_mobile.Home.Pertemuan_9.NinthActivity
 import com.example.alif_3tia_mobile.LoginActivity2
 import com.example.alif_3tia_mobile.MainActivity
@@ -87,6 +88,10 @@ class HomeFragment : Fragment() {
         }
         binding.btnP9.setOnClickListener {
             val intent = Intent(requireContext(), NinthActivity::class.java)
+            startActivity(intent)
+        }
+        binding.btnP10.setOnClickListener {
+            val intent = Intent(requireContext(), TenthActivity::class.java)
             startActivity(intent)
         }
             binding.btnLogout.setOnClickListener {
