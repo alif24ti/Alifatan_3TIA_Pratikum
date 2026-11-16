@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import com.example.alif_3tia_mobile.Home.HomeFragment
 import com.example.alif_3tia_mobile.Message.MessageFragment
 import com.example.alif_3tia_mobile.More.MoreFragment
+import com.example.alif_3tia_mobile.Note.FragmentNote
 import com.example.alif_3tia_mobile.databinding.ActivityBaseBinding
 import com.example.alif_3tia_mobile.databinding.ActivityLogin2Binding
 import com.example.alif_3tia_mobile.databinding.ActivityMainBinding
@@ -45,6 +46,13 @@ class BaseActivity : AppCompatActivity() {
                     replaceFragment(MoreFragment())
                     true
                 }
+
+                R.id.notes -> {
+                    replaceFragment(FragmentNote())
+                    true
+                }
+
+
 
                 else -> false
             }
